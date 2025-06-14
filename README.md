@@ -34,6 +34,7 @@ Make sure Python 3.x is installed. Then install the dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
 
 project-root/
 ├── Neural_Network_From_Scratch.ipynb   # Main Jupyter notebook
@@ -43,3 +44,16 @@ project-root/
 └── dataset/
     ├── Cat/
     └── Dog/
+
+```python
+from PIL import Image
+import numpy as np
+
+img = Image.open('./dataset/manual_set/4.jpg').resize((64, 64)).convert('RGB')
+img_array = np.array(img).reshape(-1, 1) / 255.0
+
+A2, _ = L_model_forward(img_array, parameters, 'tanh')
+prediction = (A2 > 0.5)
+
+print("Predicted class:", "Cat" if prediction else "Dog")
+```
