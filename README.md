@@ -36,6 +36,7 @@ Make sure Python 3.x is installed. Then install the dependencies:
 pip install -r requirements.txt
 ```
 
+```
 project-root/
 ├── Neural_Network_From_Scratch.ipynb   # Main Jupyter notebook
 ├── requirements.txt                    # Dependencies list
@@ -44,6 +45,7 @@ project-root/
 └── dataset/
     ├── Cat/
     └── Dog/
+```
 
 ```python
 from PIL import Image
