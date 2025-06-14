@@ -1,0 +1,51 @@
+# 🧠 Deep Neural Network from Scratch – Cats vs Dogs Classifier (NumPy Only)
+
+This project builds a **deep feedforward neural network** from scratch using **NumPy**, without relying on libraries like TensorFlow or PyTorch. It classifies 64x64 RGB images of cats and dogs using a manually constructed architecture, complete with backpropagation, activation functions, gradient descent, and model evaluation tools.
+
+## 📦 Dataset
+- Format: RGB images resized to 64x64
+- Structure: `Cat/` and `Dog/` folders in separate training and test directories
+- Optional: `manual_set/` directory for new image predictions
+
+## ⚙️ Features
+- Multi-layer deep neural network (configurable layer sizes)
+- `tanh` for hidden layers, `sigmoid` for binary output
+- Cross-entropy loss with manual backpropagation
+- Layer-wise parameter initialization (`He`, `Xavier`)
+- Cost and runtime tracking for each training iteration
+- Visual analysis:
+  - Cost vs time
+  - Cost gradients
+  - Runtime distributions
+  - Bubble charts of learning trends
+- Pickle-based model saving/loading (`model.pkl`)
+- Prediction on new unseen images
+
+## 🎯 Highlights
+- Full neural network implementation with no ML libraries
+- Insightful plots for debugging, performance, and convergence
+- Real-time image prediction support
+- Ideal for learning and showcasing deep learning fundamentals
+
+## 📁 File Structure
+├── Deep_Neural_Network.ipynb         # Full notebook with training, testing, visualizations  
+├── model.pkl                         # Saved model weights (binary file)  
+├── dataset/                          # Folder with training/test image data  
+│   ├── train/  
+│   │   ├── Cat/  
+│   │   └── Dog/  
+│   └── test/  
+│       ├── Cat/  
+│       └── Dog/  
+├── dataset/manual_set/               # Folder for testing new custom images  
+├── requirements.txt                  # Dependencies (NumPy, matplotlib, seaborn, etc.)  
+└── info.txt                          # This project description
+
+## 🧠 Key Learnings
+- Deep understanding of forward/backward propagation
+- Weight initialization and activation strategy selection
+- Binary classification using only NumPy
+- Visualization of training behavior
+- Making predictions on real-world data
+
+> 💡 Tip: If you're learning deep learning, this project helps you **"see under the hood"** and understand every step of a working DNN.
